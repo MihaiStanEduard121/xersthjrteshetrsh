@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { usePresentation } from '@/hooks/usePresentation';
 import { useAuth } from '@/components/AuthProvider';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button-component';
 import { Input } from '@/components/ui/input';
 import { Card } from '@/components/ui/card';
 import { Send } from 'lucide-react';

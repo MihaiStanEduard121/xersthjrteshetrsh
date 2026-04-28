@@ -6,7 +6,7 @@ import { useAuth } from '@/components/AuthProvider';
 import { v4 as uuidv4 } from 'uuid';
 import { Presentation } from '@/hooks/usePresentation';
 
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button-component';
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Plus, Layout } from 'lucide-react';

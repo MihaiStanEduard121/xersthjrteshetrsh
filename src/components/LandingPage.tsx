@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/components/AuthProvider';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button-component';
 import { motion } from 'motion/react';
 import { ArrowRight, Sparkles, MoveRight } from 'lucide-react';
 

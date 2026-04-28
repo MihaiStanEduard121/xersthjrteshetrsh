@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { usePresentation } from '@/hooks/usePresentation';
 import { motion, AnimatePresence } from 'motion/react';
 import { Maximize, Minimize } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button-component';
 
 export function PresenterScreen() {
   const { id } = useParams<{ id: string }>();

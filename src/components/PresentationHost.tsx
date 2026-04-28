@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/components/AuthProvider';
 import { usePresentation } from '@/hooks/usePresentation';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button-component';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { QRCodeSVG } from 'qrcode.react';
