@@ -1,0 +1,61 @@
+{
+  "entities": {
+    "Presentation": {
+      "title": "Presentation",
+      "description": "A live interactive presentation",
+      "type": "object",
+      "properties": {
+        "hostId": { "type": "string", "description": "The UID of the host" },
+        "title": { "type": "string", "description": "Presentation title" },
+        "currentSlideIndex": { "type": "integer" },
+        "status": { "type": "string", "enum": ["waiting", "active", "ended"] },
+        "autoplayInterval": { "type": "integer" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["hostId", "title", "currentSlideIndex", "status", "createdAt", "updatedAt"]
+    },
+    "Slide": {
+      "title": "Slide",
+      "description": "A single slide in a presentation",
+      "type": "object",
+      "properties": {
+        "presentationId": { "type": "string" },
+        "order": { "type": "integer" },
+        "title": { "type": "string" },
+        "content": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "speakerNotes": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["presentationId", "order", "updatedAt"]
+    },
+    "Message": {
+      "title": "Message",
+      "description": "A chat message in a presentation",
+      "type": "object",
+      "properties": {
+        "presentationId": { "type": "string" },
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "text": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["presentationId", "userId", "userName", "text", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/presentations/{presentationId}": {
+      "schema": "Presentation",
+      "description": "Live presentations being hosted"
+    },
+    "/presentations/{presentationId}/slides/{slideId}": {
+      "schema": "Slide",
+      "description": "Lines in a specific presentation"
+    },
+    "/presentations/{presentationId}/messages/{messageId}": {
+      "schema": "Message",
+      "description": "Chat messages in a live presentation"
+    }
+  }
+}
